@@ -1,0 +1,437 @@
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+	struct base_datos {
+	char nombre[100];
+	char apellido[100];
+	char puesto[100];
+	float sueldobase;
+	float bonificacion;	
+	int codigo;
+	}base, base2, base3;
+	
+	int menuprin, cod=1, mod, sueldototal;
+	
+	do{
+	
+		cout<<"\n            MENU\n";
+		cout<<"\n 1. INGRESAR EMPLEADO     ";
+		cout<<"\n 2. CONSULTA DE EMPLEADO   ";
+		cout<<"\n 3. MODIFICAR REGISTROS    ";
+		cout<<"\n 4. VER BASE DE DATOS     ";
+		cout<<"\n 0. SALIR\n\n      ";
+		cin>>menuprin;
+		
+		getchar();
+		system("cls");
+		
+		if(menuprin==1){
+			
+			
+			
+			cout<<"*****************************************"<<endl;
+			cout<<"\n\n           CODIGO DE EMPLEADO 1:  ";
+			cin>>base.codigo;
+						
+			cout<<"\n\n  NOMBRES:    ";
+			cin.getline(base.nombre,100,'\n');
+			cout<<"  APELLIDOS:  ";
+			cin.getline(base.apellido,100,'\n');
+			cout<<"  PUESTO:      ";
+			cin.getline(base.puesto,100,'\n');
+			cout<<"  SUELDO BASE: ";
+			cin>>base.sueldobase;			
+			cout<<"  BONIFICACION: ";
+			cin>>base.bonificacion;
+			
+			getchar();
+			system("cls");
+			
+			cout<<"*****************************************"<<endl;
+			cout<<"\n\n           CODIGO DE EMPLEADO 2:  ";
+			cin>>base2.codigo;
+						
+			cout<<"\n\n  NOMBRES:    ";
+			cin.getline(base2.nombre,100,'\n');
+			cout<<"  APELLIDOS:  ";
+			cin.getline(base2.apellido,100,'\n');
+			cout<<"  PUESTO:      ";
+			cin.getline(base2.puesto,100,'\n');
+			cout<<"  SUELDO BASE: ";
+			cin>>base2.sueldobase;
+			cout<<"  BONIFICACION: ";
+			cin>>base2.bonificacion;
+			
+			getchar();
+			system("cls");
+			
+			cout<<"*****************************************"<<endl;
+			cout<<"\n\n           CODIGO DE EMPLEADO 3:  ";
+			cin>>base3.codigo;
+						
+			cout<<"\n\n  NOMBRES:    ";
+			cin.getline(base3.nombre,100,'\n');
+			cout<<"  APELLIDOS:  ";
+			cin.getline(base3.apellido,100,'\n');
+			cout<<" PUESTO:      ";
+			cin.getline(base3.puesto,100,'\n');
+			cout<<"  SUELDO BASE: ";
+			cin>>base3.sueldobase;
+			cout<<"  BONIFICACION: ";
+			cin>>base3.bonificacion;
+			
+			getchar();
+			system("cls");
+			
+			cout<<"\n\n*****************************************"<<endl;
+			cout<<"\n       EMPLEADOS INGRESADOS CON EXITO";
+			cout<<"\n*****************************************"<<endl;
+			getchar();
+			system("cls");
+		}
+	else if(menuprin==2){
+		
+		cout<<  "\n*************************************";
+		cout<<  "\n            CONSULTA DE EMPLEADO";
+		cout<<"\n\n INGRESE CODIGO DE EMPLEADO:    ";
+		cin>>cod;
+		
+		getchar();
+		system("cls");
+		
+		if (cod==base.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base.nombre;
+				cout<<"\n    APELLIDO:     "<<base.apellido;
+				cout<<"\n    PUESTO:       "<<base.puesto;
+				cout<<"\n    SALARIO BASE: "<<base.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base.bonificacion;
+				sueldototal=base.bonificacion+base.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				getchar();
+				system("cls");
+	
+			
+		}
+		else if (cod==base2.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base2.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base2.nombre;
+				cout<<"\n    APELLIDO:     "<<base2.apellido;
+				cout<<"\n    PUESTO:       "<<base2.puesto;
+				cout<<"\n    SALARIO BASE: "<<base2.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base2.bonificacion;
+				sueldototal=base2.bonificacion+base2.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				getchar();
+				system("cls");
+	
+			
+		}
+		else if (cod==base3.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base3.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base3.nombre;
+				cout<<"\n    APELLIDO:     "<<base3.apellido;
+				cout<<"\n    PUESTO:       "<<base3.puesto;
+				cout<<"\n    SALARIO BASE: "<<base3.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base3.bonificacion;
+				sueldototal=base3.bonificacion+base3.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				getchar();
+				system("cls");
+	
+			
+		}
+		
+		else {
+			
+			cout<<"\n\n\n\n        ************************************";
+			cout<<"\n          EL EMPLEADO NO ESTA EN EL SISTEMA ";
+			cout<<"\n        ************************************";
+		getchar();
+		system("cls");
+		}
+		
+	}
+	else if (menuprin==3){
+				cout<<"\n *************************************";
+				cout<<"\n               MODIFICAR              ";
+				cout<<"\n\n INGRESE CODIGO DE EMPLEADO:    ";
+				cin>>cod;
+				
+				getchar();
+				system("cls");
+				if (cod==base.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n   1) CODIGO:  "<<base.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n   2) NOMBRE:       "<<base.nombre;
+				cout<<"\n   3) APELLIDO:     "<<base.apellido;
+				cout<<"\n   4) PUESTO:       "<<base.puesto;
+				cout<<"\n   5) SALARIO BASE: "<<base.sueldobase;
+				cout<<"\n   6) BONIFICACION: "<<base.bonificacion;
+				sueldototal=base.bonificacion+base.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n\n ESCRIBA EL NUMERO DE CAMPO A MODIFICAR\n     ";
+				cin>>mod;
+				cout<<"\n\n ***********************************\n";
+				
+				switch (mod){
+					
+					case 1: cout<<"INGRESE NUEVO CODIGO:   ";
+							cin>>base.codigo; break;
+					case 2: cout<<"INGRESE NUEVO NOMBRE:   ";
+							cin.getline(base.nombre,100,'\n');break;
+					case 3: cout<<"INGRESE NUEVO APELLIDO:   ";
+							cin.getline(base.apellido,100,'\n');break;
+					case 4: cout<<"INGRESE NUEVO PUESTO:   ";
+							cin.getline(base.puesto,100,'\n');break;
+					case 5: cout<<"INGRESE NUEVO SALARIO:   ";
+							cin>>base.sueldobase; break;
+					case 6: cout<<"INGRESE NUEVA BONIFICACION:   ";
+							cin>>base.bonificacion; break;
+				}
+				
+				system("cls");
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base.nombre;
+				cout<<"\n    APELLIDO:     "<<base.apellido;
+				cout<<"\n    PUESTO:       "<<base.puesto;
+				cout<<"\n    SALARIO BASE: "<<base.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base.bonificacion;
+				sueldototal=base.bonificacion+base.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n**************************************";
+				cout<<"\n      CAMBIO EFECTUADO CON EXITO";
+				cout<<"\n**************************************";
+				
+				getchar();
+				getchar();
+				system("cls");
+	
+			
+		}
+		else if (cod==base2.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n   1) CODIGO:  "<<base2.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n   2) NOMBRE:       "<<base2.nombre;
+				cout<<"\n   3) APELLIDO:     "<<base2.apellido;
+				cout<<"\n   4) PUESTO:       "<<base2.puesto;
+				cout<<"\n   5) SALARIO BASE: "<<base2.sueldobase;
+				cout<<"\n   6) BONIFICACION: "<<base2.bonificacion;
+				sueldototal=base2.bonificacion+base2.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n\n ESCRIBA EL NUMERO DE CAMPO A MODIFICAR\n     ";
+				cin>>mod;
+				cout<<"\n\n ***********************************\n";
+				
+				switch (mod){
+					
+					case 1: cout<<"INGRESE NUEVO CODIGO:   ";
+							cin>>base2.codigo; break;
+					case 2: cout<<"INGRESE NUEVO NOMBRE:   ";
+							cin.getline(base2.nombre,100,'\n');break;
+					case 3: cout<<"INGRESE NUEVO APELLIDO:   ";
+							cin.getline(base2.apellido,100,'\n');break;
+					case 4: cout<<"INGRESE NUEVO PUESTO:   ";
+							cin.getline(base2.puesto,100,'\n');break;
+					case 5: cout<<"INGRESE NUEVO SALARIO:   ";
+							cin>>base2.sueldobase; break;
+					case 6: cout<<"INGRESE NUEVA BONIFICACION:   ";
+							cin>>base2.bonificacion; break;
+				}
+				
+				system("cls");
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base2.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base2.nombre;
+				cout<<"\n    APELLIDO:     "<<base2.apellido;
+				cout<<"\n    PUESTO:       "<<base2.puesto;
+				cout<<"\n    SALARIO BASE: "<<base2.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base2.bonificacion;
+				sueldototal=base2.bonificacion+base2.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n**************************************";
+				cout<<"\n      CAMBIO EFECTUADO CON EXITO";
+				cout<<"\n**************************************";
+				
+				getchar();
+				getchar();
+				system("cls");
+	
+
+	
+			
+		}
+		else if (cod==base3.codigo){
+		
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n   1) CODIGO:  "<<base3.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n   2) NOMBRE:       "<<base3.nombre;
+				cout<<"\n   3) APELLIDO:     "<<base3.apellido;
+				cout<<"\n   4) PUESTO:       "<<base3.puesto;
+				cout<<"\n   5) SALARIO BASE: "<<base3.sueldobase;
+				cout<<"\n   6) BONIFICACION: "<<base3.bonificacion;
+				sueldototal=base3.bonificacion+base3.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n\n ESCRIBA EL NUMERO DE CAMPO A MODIFICAR\n     ";
+				cin>>mod;
+				cout<<"\n\n ***********************************\n";
+				
+				switch (mod){
+					
+					case 1: cout<<"INGRESE NUEVO CODIGO:   ";
+							cin>>base3.codigo; break;
+					case 2: cout<<"INGRESE NUEVO NOMBRE:   ";
+							cin.getline(base3.nombre,100,'\n');break;
+					case 3: cout<<"INGRESE NUEVO APELLIDO:   ";
+							cin.getline(base3.apellido,100,'\n');break;
+					case 4: cout<<"INGRESE NUEVO PUESTO:   ";
+							cin.getline(base3.puesto,100,'\n');break;
+					case 5: cout<<"INGRESE NUEVO SALARIO:   ";
+							cin>>base3.sueldobase; break;
+					case 6: cout<<"INGRESE NUEVA BONIFICACION:   ";
+							cin>>base3.bonificacion; break;
+				}
+				
+				system("cls");
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base3.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base3.nombre;
+				cout<<"\n    APELLIDO:     "<<base3.apellido;
+				cout<<"\n    PUESTO:       "<<base3.puesto;
+				cout<<"\n    SALARIO BASE: "<<base3.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base3.bonificacion;
+				sueldototal=base3.bonificacion+base3.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n**************************************";
+				cout<<"\n      CAMBIO EFECTUADO CON EXITO";
+				cout<<"\n**************************************";
+				
+				getchar();
+				getchar();
+				system("cls");
+	
+
+	
+			
+		}
+		else {
+			
+			cout<<"\n\n\n\n        ************************************";
+			cout<<"\n          EL EMPLEADO NO ESTA EN EL SISTEMA ";
+			cout<<"\n        ************************************";
+		getchar();
+		system("cls");
+		}		
+	}
+	else if (menuprin==4){
+				
+				cout<<"\n *************************************";
+				cout<<"\n             BASE DE DATOS";
+				cout<<"\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base.nombre;
+				cout<<"\n    APELLIDO:     "<<base.apellido;
+				cout<<"\n    PUESTO:       "<<base.puesto;
+				cout<<"\n    SALARIO BASE: "<<base.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base.bonificacion;
+				sueldototal=base.bonificacion+base.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				cout<<"\n\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base2.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base2.nombre;
+				cout<<"\n    APELLIDO:     "<<base2.apellido;
+				cout<<"\n    PUESTO:       "<<base2.puesto;
+				cout<<"\n    SALARIO BASE: "<<base2.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base2.bonificacion;
+				sueldototal=base2.bonificacion+base2.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+			
+				cout<<"\n\n *************************************";
+				cout<<"\n               EMPLEDADO             ";
+				cout<<"\n    CODIGO:  "<<base3.codigo; 
+				cout<<"\n                                    ";
+				cout<<"\n    NOMBRE:       "<<base3.nombre;
+				cout<<"\n    APELLIDO:     "<<base3.apellido;
+				cout<<"\n    PUESTO:       "<<base3.puesto;
+				cout<<"\n    SALARIO BASE: "<<base3.sueldobase;
+				cout<<"\n    BONIFICACION: "<<base3.bonificacion;
+				sueldototal=base3.bonificacion+base3.sueldobase;
+				cout<<"\n    SUELDO TOTAL: "<<sueldototal;
+				cout<<"\n                                    ";
+				cout<<"\n *************************************";
+				
+				getchar();
+				system("cls");
+}
+	}while(menuprin>0);
+	
+	
+	
+return 0;	
+}
